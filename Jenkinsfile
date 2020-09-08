@@ -2,17 +2,17 @@ pipeline {
       agent any
        stages {
            stage(‘build’){
-            steps{
+            step{
               echo ‘Build Stage’
                   }    
                            }
            stage(‘test’){
-            steps{
+            step{
               echo ‘Test Stage’
                   }    
                            }
             stage(‘deploy’){
-            steps{
+            step{
               echo ‘Deploy Stage’
                   }    
                            }

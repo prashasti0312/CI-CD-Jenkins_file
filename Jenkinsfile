@@ -15,7 +15,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo "This is test stage"
-                ls
             }
         }
     }

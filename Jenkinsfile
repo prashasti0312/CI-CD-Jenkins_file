@@ -1,21 +1,17 @@
 pipeline {
-      agent any
-       stages {
-           stage("build"){
-            steps{
-              echo "Build Stage"
-                  }    
-                           }
-           stage("test"){
-            steps{
-              echo "Test Stage"
-                  }    
-                           }
-            stage("deploy"){
-            steps{
-              echo "Deploy Stage"
-                  }    
-                           }
-
-              }
+    agent any
+    environment {
+        DD_GIT_DEFAULT_BRANCH = 'main'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Hello! This is build stage"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "This is test stage"
+            }
+        }
     }

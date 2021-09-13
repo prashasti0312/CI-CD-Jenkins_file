@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "This is test stage"
-                test -f info.txt
+                test -f "info.txt"
             }
         }
     }

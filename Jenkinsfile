@@ -7,11 +7,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Hello! This is build stage"
+                mkdir newdir
+                cd newdir
+                vi info.txt
             }
         }
         stage('Test') {
             steps {
                 echo "This is test stage"
+                test -f info.txt
             }
         }
     }
